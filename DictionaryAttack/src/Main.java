@@ -8,7 +8,13 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        String encrypted = "B676E3468280E47D8F1E3EE54DA6984E";
+        /*
+        The file is encrypted with the password
+        6666666666666666
+        and the cipher text is :
+
+         */
+        String encrypted = "B676E3468280E47D8F1E3EE54DA6984E"; // Ciphertext.
 
         ArrayList<String> keyList = lineByLine("keys.txt");
 
@@ -34,8 +40,7 @@ public class Main {
             if(temp.equals(encrypted)){
                 System.out.println("******* Key found : " + s);
             }else{
-                System.out.println("Incorrect key : " + temp);
-                System.out.println("Should be : " + encrypted);
+                System.out.println("Incorrect key : " + s);
             }
 
         }
